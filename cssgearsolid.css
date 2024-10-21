@@ -20,63 +20,89 @@
     --amarelo: #fdd700;
     --amarelo-podre: #87a500;
     --dourado: #daa001;
+    --laranja-solido: #ff5e00;
+    --marrom-escuro: #632700;
+    --marrom-mais-escuro: #471d00;
+    --marrom-claro: #b65200;
     --verde-escuro: #006308;
     --verde-claro: #00b818;
     
 }
 
 
-body {
+#body {
     background-color: var(--cinza-escuro);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('fundotechno5.jpg');
+    background-image: url('vilaescura.jpg');
      background-repeat: no-repeat;
      background-size: cover;
+     background-position: 100%;
 }
 
-#contexto {
+#frasecontexto {
     font-size: 35px;
     text-align: center;
-    color: var(--azul-futuro);
-    background-color: rgba(59, 59, 59, 0.6);
+    color: var(--marrom-claro);
+    background-color: rgba(90, 49, 16, 0.6);
     margin-left: 30%;
     margin-right: 30%;
-    margin: 10%;
+    margin: 7.5%;
     animation-name: fade-in;
     animation-duration: 3s;
+    cursor: default;
  }
 
- #botaocontexto {
+ #botaoescolha {
     text-align: center;
     width: 300px;
     height: 60px;
     font-size: 30px;
     margin: auto;
     display: block;
-    background-color: var(--azul-futuro);
-    color: var(--cinza-escuro);
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
     transition-duration: 0.8s;
-    border-radius: 8px;
+    border-radius: 1px;
     animation-name: fade-in;
     animation-duration: 3s;
  }
- #botaocontexto:hover {
-    color: var(--azul-futuro);
-    background-color: var(--cinza-escuro);
+ #botaoescolha:hover {
+    color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
     cursor: pointer;
 
  }
 
  #contexto2 {
     text-align: center;
-    color: var(--azul-futuro);
+    color: var(--marrom-claro);
     font-size: 30px;
     animation-name: fade-in;
     animation-duration: 3s;
+    cursor: default;
 
  }
 
  @keyframes fade-in {
     from {opacity: 0%;}
     to {opacity: 100%;}
+ }
+
+ @keyframes fade-out {
+   from {opacity: 100%;}
+   to {opacity: 0%;}
+ }
+
+ #fadeinicio {
+   background-color: var(--branco-total);
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   background:var(--branco-total);
+   top: 0;
+   left: 0;
+   display: none;
+   animation: fade-in 1s, fade-out 1s;
+   animation-delay: 0s, 1s;
+   animation-fill-mode: forwards;
  }
