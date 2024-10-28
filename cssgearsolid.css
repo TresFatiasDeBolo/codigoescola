@@ -29,15 +29,15 @@
     
 }
 
-
 #body {
-    background-color: var(--cinza-escuro);
+    background-image: url(vilaescura.jpg);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('vilaescura.jpg');
      background-repeat: no-repeat;
      background-size: cover;
      background-position: 100%;
 }
+
 
 #frasecontexto {
     font-size: 35px;
@@ -52,7 +52,7 @@
     cursor: default;
  }
 
- #botaoescolha {
+ #botaocontexto {
     text-align: center;
     width: 300px;
     height: 60px;
@@ -66,22 +66,50 @@
     animation-name: fade-in;
     animation-duration: 3s;
  }
- #botaoescolha:hover {
+
+ #botaocontexto:hover {
     color: var(--marrom-claro);
     background-color: var(--marrom-mais-escuro);
     cursor: pointer;
-
  }
 
- #contexto2 {
+ #contexto {
     text-align: center;
     color: var(--marrom-claro);
     font-size: 30px;
     animation-name: fade-in;
     animation-duration: 3s;
     cursor: default;
-
+    margin-top: 50px;
  }
+
+ #fadecontexto {
+    background-color: var(--branco-total);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background:var(--branco-total);
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 1s, fade-out 1s;
+    animation-delay: 0s, 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #fadenormal {
+   background-color: var(--branco-total);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background:var(--branco-total);
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 0.3s, fade-out 0.3s;
+    animation-delay: 0s, 1s;
+    animation-fill-mode: forwards;
+  }
 
  @keyframes fade-in {
     from {opacity: 0%;}
@@ -93,16 +121,54 @@
    to {opacity: 0%;}
  }
 
- #fadeinicio {
-   background-color: var(--branco-total);
-   height: 100%;
-   width: 100%;
-   position: fixed;
-   background:var(--branco-total);
-   top: 0;
-   left: 0;
-   display: none;
-   animation: fade-in 1s, fade-out 1s;
-   animation-delay: 0s, 1s;
-   animation-fill-mode: forwards;
+ #conflito {
+    font-size: 33px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin: 7.5%;
+    background-color: rgba(90, 49, 16, 0.6);
+    display: none;
+    color: var(--marrom-claro);
  }
+
+ #escolha1 {
+    display: none;
+    text-align: center;
+    width: 330px;
+    height: 80px;
+    font-size: 30px;
+    display: none;
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
+    border-radius: 1px;
+    transition-duration: 0.8s;
+    margin-left: 22%;
+    vertical-align: middle;
+ }
+
+#escolha2 {
+    display: none;
+    text-align: center;
+    width: 330px;
+    height: 80px;
+    font-size: 30px;
+    display: none;
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
+    border-radius: 1px;
+    transition-duration: 0.8s;
+    margin-left: 8%;
+    vertical-align: middle;
+}
+
+#escolha1:hover {
+   color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
+    cursor: pointer;
+}
+
+#escolha2:hover {
+   color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
+    cursor: pointer;
+}

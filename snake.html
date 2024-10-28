@@ -1,34 +1,73 @@
-<!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fala o nome da historia bruno</title>
+    <title>Metal Gear Solid</title>
     <link rel="stylesheet" href="cssgearsolid.css">
+    <link rel="shortcut icon" href="placeholder.jpg" type="image/x-icon">
 </head>
 <body id="body">
+    
+    <h1 id="contexto">---CONTEXTO---</h1>
 
-    <script>
-        let trocaimagem = document.getElementById("body");
-        function iniciar() {
-      (document.getElementById("botaoescolha").click) 
-        document.getElementById("fadeinicio").style.display = 'block';
-        setTimeout(1000);
-        trocaimagem.style.backgroundImage = 'url(floresta.jpg)'
-     }
-    </script>
-
-    <p id="contexto2">---CONTEXTO---</p>
-
-    <div id="frasecontexto">A história se passa em eras antigas, quando os reis e imperadores ainda
+    <div id="frasecontexto">
+        A história se passa em eras antigas, quando os reis e imperadores ainda
         governavam a terra. Porém, nessas terras, nem tudo é tão
         antigo quanto parece ser. Você é um mercador fabricante de poções que
          está escrevendo a anos um livro de receitas.
     </div>
 
-    <button id="botaoescolha" onclick="iniciar()">Começe a jornada</button>
+    <button id="botaocontexto" onclick="fadeContx();setTimeout(removerContx, 1000);setTimeout
+    (removerFadeContx, 2000)">COMECE!</button>
 
-    <div id="fadeinicio"></div>
- 
+    <div id="fadecontexto"></div>
+
+    <div id="fadenormal"></div>
+
+    <div id="conflito"></div>
+
+    <button id="escolha1"></button>
+
+    <button id="escolha2"></button>
+
+    <!-- crie uma função geral para todas as perguntas
+     vai la vc consegue :) -->
+
+    <script>
+        const botaocontx = document.getElementById("botaocontexto");
+            const contx = document.getElementById("contexto");
+            const frasecontx = document.getElementById("frasecontexto");
+            const escol1 = document.getElementById("escolha1");
+            const escol2 = document.getElementById("escolha2");
+            const confl = document.getElementById("conflito");
+            const fadecontx = document.getElementById("fadecontexto");
+            const fadenorm = document.getElementById("fadenormal");
+
+        function removerContx() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            frasecontx.remove();
+            contx.remove();
+            botaocontx.remove();
+
+            confl.style.display = "block";
+            confl.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function removerFadeContx() {
+            fadecontx.style.display = 'none'
+        }
+
+        function fadeContx() {
+        fadecontx.style.display = 'block'
+        }
+
+    </script>
+    
 </body>
 </html>
