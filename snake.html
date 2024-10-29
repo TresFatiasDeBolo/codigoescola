@@ -17,7 +17,7 @@
          está escrevendo a anos um livro de receitas.
     </div>
 
-    <button id="botaocontexto" onclick="fadeContx();setTimeout(removerContx, 1000);setTimeout
+    <button id="botaocontexto" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
     (removerFadeContx, 2000)">COMECE!</button>
 
     <div id="fadecontexto"></div>
@@ -26,12 +26,9 @@
 
     <div id="conflito"></div>
 
-    <button id="escolha1"></button>
+    <button id="escolha1" onclick="fadeNormal();setTimeout(passarPergunta, 300);(removerFadeNormal, 600);"></button>
 
-    <button id="escolha2"></button>
-
-    <!-- crie uma função geral para todas as perguntas
-     vai la vc consegue :) -->
+    <button id="escolha2" onclick="fadeNormal();setTimeout(passarPergunta, 300);(removerFadeNormal, 600);"></button>
 
     <script>
         const botaocontx = document.getElementById("botaocontexto");
@@ -42,20 +39,29 @@
             const confl = document.getElementById("conflito");
             const fadecontx = document.getElementById("fadecontexto");
             const fadenorm = document.getElementById("fadenormal");
+            const clicks = 0;
 
-        function removerContx() {
+        function pergunta1() {
             document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
             frasecontx.remove();
             contx.remove();
             botaocontx.remove();
 
             confl.style.display = "block";
+            confl.style.color = 'var(--azul-claro)';
+            confl.style.backgroundColor = '#0a43be6b';
             confl.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
 
             escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
             escol1.innerHTML = "Vou correndo até a luz"
 
             escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
             escol2.innerHTML = "Vou silenciosamente até a luz"
         }
 
@@ -66,6 +72,50 @@
         function fadeContx() {
         fadecontx.style.display = 'block'
         }
+
+        function fadeNormal() {
+            fadenorm.style.display = 'block'
+        }
+        function removerFadeNormal() {
+            fadenorm.style.display = 'none'
+        }
+
+        (escol1, escol2).onclick = function passarPergunta() {
+            
+        }
+
+        function contarClicks() {
+            (escol1,escol2).onclick = clicks++;
+        }
+
+        function passarPergunta() {
+            if (clicks = 1) {
+                pergunta2();
+            } else if (clicks = 2) {
+                pergunta3();
+            }
+        }
+
+        function pergunta2() {
+            confl.style.display = "block";
+            confl.style.color = 'var(--azul-claro)';
+            confl.style.backgroundColor = '#0a43be6b';
+            confl.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "não sei"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        setInterval(contarClicks, 10)
 
     </script>
     

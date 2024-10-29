@@ -13,6 +13,7 @@
     --azul-claro: #5cccf8;
     --ciano: #06a7a7;
     --azul-escuro: #0a43be;
+    --azul-mais-escuro: #062a77;
     --azul-futuro: #007eaf;
     --vermelho: #e70000;
     --vermelho-escuro: #7c0000;
@@ -54,7 +55,7 @@
     cursor: default;
  }
 
- #botaocontexto {
+ #botaocontexto { 
     text-align: center;
     width: 300px;
     height: 80px;
@@ -63,6 +64,7 @@
     display: block;
     background-color: var(--marrom-escuro);
     color: var(--marrom-claro);
+    border-color: var(--marrom-mais-escuro);
     transition-duration: 0.8s;
     border-radius: 1px;
     animation-name: fade-in;
@@ -82,7 +84,7 @@
     animation-name: fade-in;
     animation-duration: 3s;
     cursor: default;
-    margin-top: 220px;
+    margin-top: 180px;
  }
 
  #fadecontexto {
@@ -109,7 +111,7 @@
     left: 0;
     display: none;
     animation: fade-in 0.3s, fade-out 0.3s;
-    animation-delay: 0s, 1s;
+    animation-delay: 0s, 0.3s;
     animation-fill-mode: forwards;
   }
 
