@@ -4,7 +4,7 @@ História/Atos:
 Ela se passa nos tempos antigos, quando os reis ainda governavam os reinos. Você será colocado
 na pele de um mercador, fabricante de poções, que a anos está escrevendo seu livro com suas receitas únicas. 
 
-Ato 1
+Primeira pergunta
 
 Durante uma noite chuvosa, você está andando por uma floresta  com apenas uma uma tocha para te iluminar.
 Seu objetivo é encontrar a Gota da Meia Noite, uma flor que floresce apenas na floresta durante a chuva.
@@ -59,59 +59,32 @@ Antes de abrir sua loja, já no outro dia, você decide olhar a bancada novament
 
 Quinta questão 
 
-Você passa as próximas horas trabalhando e pensando nas fórmulas mostradas pela máquina, então no meio da multidão você repara em alguém com uma roupa muito parecida com a do cientista da noite passada, e corre atrás dele.
+Você passa as próximas horas trabalhando. Naquela noite, após você fechar sua loja, você decide tentar pegar o Heléboro-Azul pois estava chovendo. Você tentou mexer um pouco na máquina antes de sair, mas você não entendeu o quê ela era e nem como funcionava.
 
-Chegando atrás dele, você explica a situação e o chama para ver a máquina e pedir explicações sobre as fórmulas. O que você pergunta primeiro?
-
-
-1- "O quê é exatamente essa máquina?"
-2- "O quê são aqueles símbolos?"
-
-1: "É uma máquina com inteligência artifical avançada."
-2: "São fórmulas químicas."
+vc fala com ele la no mato e ele pergunta quem é vc e vc responde
 
 
 Sexta questão 
 
-Após você explicar toda a situação para o homem, ele começa a explicar o que aconteceu:
-“Eu vim do futuro, pois daqui 300 anos o mundo vai passar por uma crise e precisamos de alguns recursos dessa época, para me auxiliar eu trouxe essa máquina com uma inteligência artificial avançada, contendo diversas fórmulas que podem ser úteis na pesquisa e busca dos recursos.”
+ele te responde dizendo que você não parece estar indo atrás dele. você fica claramente confuso, e ele te responde dizendo que ele tentou falar com o rei, mas os cavaleiros que o guardavam não iam muito com a cara dele e não deixaram ele entrar, então ele deu uma desculpa e foi embora. você responde:
 
-Você fica tão surpreso com a história e imediatamente pensa em tentar testar a máquina.
+eu acho que eu tenho algo que é seu...
+flor
 
+flor: entendi.
 
-1- "Posso tentar montar uma opção com isso?"
-2- "Me deixe testar a máquina para ver como ela funciona."
-
-(necessitando resposta)
+tenho algo seu: "hm? como assim?" voce explica que levou a "mesa da luz azul" até a sua loja, e ele confirma que ela é sim algo dele, pedindo para você ir buscar
 
 Sétima questão 
 
-Você imediatamente pega alguns recursos, junto de um frasco e seguindo os conselhos do cientista você faz uma poção de forma muito fácil e prática. Após terminar, o cientista comenta que os recursos usados ficarão armazenados no banco de dados da máquina e podem ser sintetizados no futuro, então só resta uma dúvida: qual recurso exatamente o cientista precisa para o ajudar no futuro?
-
-
-1- "O quê você precisa para ajudar o futuro?"
-2- "Como vamos achar os recursos necessários para ajudar o futuro?"
-
-1: “Não sei exatamente, precisamos catalogar os recursos no banco de dados, isso já me ajudaria muito.”
-2: “Vamos adicionar alguns recursos no banco de dados. A I.A identificará os recursos necessários.”
-
+vc pega lá, leva até ele e
 
 Oitava pergunta 
 
-Após alguns minutos catalogando os recursos,a inteligência artificial identifica o recurso necessário, porém não pode recriar o elemento necessário pois a amostra utilizada estava incompleta, então eles precisaram ir atrás do recurso, porém há um problema, o recurso em questão é a Gota da Meia Noite, então eles terão que esperar até o anoitecer para conseguir entrar na floresta.
-Você avisa o cientista:
-
-1- "Temos que ir de forma silenciosa, pois os guardas iriam impedir eles de entrarem nas florestas."
-2- "A floresta é perigosa, temos que ir rapidamente pela floresta, encontrar a planta e ir embora."
-
-(...necessitando resposta?)
 
 Nona questão 
 
-Chegando na floresta a chuva começa a aumentar e a visão dos dois começa a ficar encoberta pela chuva e vocês começam a andar mais rápido, levando a máquina junto, você percebe que não conseguiria levar a máquina por muito mais tempo, então sugere: 
-
-1- "Vamos nos abrigar em uma caverna."
-2- "Vamos em direção ao local que você chegou, e nos abrigar lá."
+ em direção ao local que você chegou, e nos abrigar lá."
 
 Décima questão 
 
@@ -144,19 +117,12 @@ a gente não vai realmente usar isso no final), testando sons com o <audio contr
 
 17/10 - 22/10: Criando uma função para as transições
 
-23/10 - 27/10: Muita coisa que eu não anotei, decidi mudar o código do javascript para ele ficar inline, terminei as transições entre perguntas,
+23/10 - 27/10: Muita coisa que eu não anotei, decidi mudar o código do javascript para ele ficar inline
+
+27/10 - 29/10: Eu tentei MUITO fazer uma transição eficiente e bem feita de uma página (não são realmente páginas, eu só mudei a aparência de tudo mesmo), mas eu não consegui até agora. Eu usei Arrays, eu usei setInterval, coloquei para ele contabilizar quantos clicks cada botão teve e uma função pra mudar a pergunta considerando quantos clicks cada botão teve, eu tentei de TUDO mas não deu. Vou fazer uma versão funcional do site, porém essa versão é muito bruta, não é eficiente e nem bem feita, mas pelo menos funciona. Vou tentar fazer uma versão melhor nesse meio tempo... 
 
 --------------------   
 
 
 Apresentação: Nada ainda.
 
-
-
-            document.getElementById("fadenormal").style.display = 'block'
-
-            document.getElementById("body").style.backgroundImage = 'url(solidsnake.jpg)'
-            frasecontx.remove();
-            contx.remove();
-            botaocontx.remove();
-            

@@ -1,0 +1,775 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poções e Robôs</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="pocaofeia.ico" type="image/x-icon">
+</head>
+<body id="body">
+
+
+    <!--Trabalho feito por:
+    Antony Berte: Programação, leves mudanças na história, icone da pagina
+    Bruno Henrique: História
+    Gabriel Timoteo: Imagens
+    -->
+
+
+    <h1 id="contexto">---CONTEXTO---</h1>
+
+    <div id="frasecontexto">
+        A história se passa em eras antigas, quando os reis e imperadores ainda
+        governavam a terra. Porém, nessas terras, nem tudo é tão
+        antigo quanto parece ser. Você é um mercador fabricante de poções que
+         está escrevendo a anos um livro de receitas.
+    </div>
+
+    <button id="botaocontexto" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
+    (removerFadeContx, 2000)">COMECE!</button>
+
+    <div id="fadecontexto"></div>
+
+    <div id="fadenormal"></div>
+
+    <!--As perguntas e os 2 botões de cada uma-->
+
+    <div id="conflito1"></div>
+    <button id="escolha1" onclick="fadeNormal();setTimeout(tropecar, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 1-->  
+    <button id="escolha2" onclick="fadeNormal();setTimeout(pergunta2, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    
+
+    <div id="conflito2"></div>
+    <button id="escolha3" onclick="fadeNormal();setTimeout(pergunta3queda, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 2-->
+    <button id="escolha4" onclick="fadeNormal();setTimeout(pergunta3lento, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito3"></div>
+    <button id="escolha5" onclick="fadeNormal();setTimeout(pergunta4toalha, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 3-->
+    <button id="escolha6" onclick="fadeNormal();setTimeout(pergunta4mesa, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito4"></div>
+    <button id="escolha7" onclick="fadeNormal();setTimeout(pergunta5floresta, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 4-->
+    <button id="escolha8" onclick="fadeNormal();setTimeout(pergunta5nao, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito5"></div>
+    <button id="escolha9" onclick="fadeNormal();setTimeout(pergunta5oi, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 5-->
+    <button id="escolha10" onclick="fadeNormal();setTimeout(pergunta5susto, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito6"></div>
+    <button id="escolha11" onclick="fadeNormal();setTimeout(pergunta6flor, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 6-->
+    <button id="escolha12" onclick="fadeNormal();setTimeout(pergunta6algoseu, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito7"></div>
+    <button id="escolha13" onclick="fadeNormal();setTimeout(pergunta7ajuda, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 7-->
+    <button id="escolha14" onclick="fadeNormal();setTimeout(pergunta7esperar, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito8"></div>
+    <button id="escolha15" onclick="fadeNormal();setTimeout(pergunta8como, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 8-->
+    <button id="escolha16" onclick="fadeNormal();setTimeout(pergunta8heleboro, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito9"></div>
+    <button id="escolha17" onclick="fadeNormal();setTimeout(pergunta10saosim, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 9-->
+    <button id="escolha18" onclick="fadeNormal();setTimeout(pergunta10oqhouve, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito10"></div>
+    <button id="escolha19" onclick="fadeContx();setTimeout(pergunta10tchau, 1000);setTimeout
+(removerFadeContx, 2000)" ></button>  <!--Pergunta 10-->
+    <button id="escolha20" onclick="fadeContx();setTimeout(pergunta10obg, 1000);setTimeout
+    (removerFadeContx, 2000)"></button>
+
+    <button id="tropeco1" onclick="fadeNormal();soltar1();setTimeout(removerFadeNormal, 600)"></button>
+    <button id="tropeco2" onclick="fadeNormal();soltar2();setTimeout(removerFadeNormal, 600)"></button>
+    <button id="tropeco3" onclick="fadeNormal();pergunta2correr();setTimeout(removerFadeNormal, 600)"></button>
+
+    <button id="continuar1" onclick="fadeNormal();pergunta2p2();setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar2" onclick="fadeNormal();setTimeout(pergunta3p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar3" onclick="fadeNormal();setTimeout(pergunta4p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuarpedra" onclick="fadeNormal();setTimeout(pergunta3normal, 300);setTimeout(removerFadeNormal, 600)">Se levantar</button>
+    <button id="continuar4" onclick="fadeNormal();setTimeout(pergunta5p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar5" onclick="fadeNormal();setTimeout(pergunta5p3, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar6" onclick="fadeNormal();setTimeout(pergunta6, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar7" onclick="fadeNormal();setTimeout(pergunta7, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar8" onclick="fadeNormal();setTimeout(pergunta7p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar9" onclick="fadeNormal();setTimeout(pergunta8, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar10" onclick="fadeNormal();setTimeout(pergunta9, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar11" onclick="fadeContx();setTimeout(pergunta9p2, 1000);setTimeout(removerFadeContx, 2000)">Continuar</button>
+    <button id="continuar12" onclick="fadeNormal();setTimeout(pergunta10p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar13" onclick="fadeContx();setTimeout(creditos, 1000);setTimeout(removerFadeContx, 2000)">Créditos</button>
+
+    <button id="reiniciar" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout(removerFadeContx, 2000)">Reiniciar?</button>
+
+    <script>
+        const botaocontx = document.getElementById("botaocontexto");
+            const contx = document.getElementById("contexto");
+            const frasecontx = document.getElementById("frasecontexto");
+
+            const escol1 = document.getElementById("escolha1");
+            const escol2 = document.getElementById("escolha2");
+            const confl1 = document.getElementById("conflito1");
+
+            const tropec1 = document.getElementById("tropeco1");
+            const tropec2 = document.getElementById("tropeco2");
+            const tropec3 = document.getElementById("tropeco3");
+
+            const escol3 = document.getElementById("escolha3");
+            const escol4 = document.getElementById("escolha4");
+            const confl2 = document.getElementById("conflito2");
+
+            const escol5 = document.getElementById("escolha5");
+            const escol6 = document.getElementById("escolha6");
+            const confl3 = document.getElementById("conflito3");
+
+            const escol7 = document.getElementById("escolha7");
+            const escol8 = document.getElementById("escolha8");
+            const confl4 = document.getElementById("conflito4");
+
+            const escol9 = document.getElementById("escolha9");
+            const escol10 = document.getElementById("escolha10");
+            const confl5 = document.getElementById("conflito5");
+
+            const escol11 = document.getElementById("escolha11");
+            const escol12 = document.getElementById("escolha12");
+            const confl6 = document.getElementById("conflito6");
+
+            const escol13 = document.getElementById("escolha13");
+            const escol14 = document.getElementById("escolha14");
+            const confl7 = document.getElementById("conflito7");
+
+            const escol15 = document.getElementById("escolha15");
+            const escol16 = document.getElementById("escolha16");
+            const confl8 = document.getElementById("conflito8");
+
+            const escol17 = document.getElementById("escolha17");
+            const escol18 = document.getElementById("escolha18");
+            const confl9 = document.getElementById("conflito9");
+
+            const escol19 = document.getElementById("escolha19");
+            const escol20 = document.getElementById("escolha20");
+            const confl10 = document.getElementById("conflito10");
+            
+
+            const fadecontx = document.getElementById("fadecontexto");
+            const fadenorm = document.getElementById("fadenormal");
+            const fadepisc = document.getElementById("piscar");
+
+            const contin1 = document.getElementById("continuar1");
+            const contin2 = document.getElementById("continuar2"); 
+            const continpedra = document.getElementById("continuarpedra");
+            const contin3 = document.getElementById("continuar3");
+            const contin4 = document.getElementById("continuar4");
+            const contin5 = document.getElementById("continuar5");
+            const contin6 = document.getElementById("continuar6");
+            const contin7 = document.getElementById("continuar7");
+            const contin8 = document.getElementById("continuar8");
+            const contin9 = document.getElementById("continuar9");
+            const contin10 = document.getElementById("continuar10");
+            const contin11 = document.getElementById("continuar11");
+            const contin12 = document.getElementById("continuar12");
+            const contin13 = document.getElementById("continuar13");
+
+            const reiniciar = document.getElementById("reiniciar")
+
+        function pergunta1() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            frasecontx.style.display = 'none'
+            contx.style.display = 'none'
+            botaocontx.style.display = 'none'
+            contin4.style.display = 'none'
+            continpedra.style.display = 'none'
+            confl10.style.display = 'none'
+            reiniciar.style.display = 'none'
+
+            confl1.style.display = "block";
+            confl1.style.cursor = 'default'
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: um Heléboro-Azul, uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta2() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            escol1.style.display = 'none'
+            escol2.style.display = 'none'
+            confl1.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'none'
+
+            contin1.style.display = 'block'
+
+            confl2.style.display = "block";
+            confl2.style.cursor = 'default'
+            confl2.style.color = 'var(--azul-claro)';
+            confl2.style.backgroundColor = '#0a43be6b';
+            confl2.innerHTML = "Cautelosamente, e se escondendo atrás de uma árvore, você se aproxima da luz. Olhando para o local de origem dela, você vê um homem com um sobretudo e uma... máquina? Você não consegue identificar o rosto do homem, nem o objeto, que aparenta ser feito de algum tipo de metal. Após 2 minutos observando a cena, algo que parece ser a porta da máquina abre, e de lá sai... uma mesa com rodas?! O quê?";
+
+        }
+
+        function pergunta2correr() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            
+
+            contin1.style.display = 'block'
+
+            confl2.style.display = "block";
+            confl2.style.color = 'var(--azul-claro)';
+            confl2.style.backgroundColor = '#0a43be6b';
+            escol2.style.display = "inline-block";
+            confl2.innerHTML = "Após esse desastre, você se esconde atrás de uma árvore e se aproxima da luz. Olhando para o local de origem dela, você vê um homem com um sobretudo e uma... mobília? Uma máquina? Você não consegue identificar o rosto do homem, nem o objeto, que aparenta ser feito de algum tipo de metal. Após 2 minutos observando a cena, algo que parece ser a porta da máquina abre, e de lá sai... uma mesa com rodas?! O quê?";
+
+            escol1.style.display = 'none'
+            escol2.style.display = 'none'
+            confl1.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'none'
+
+        }
+
+        function pergunta2p2() {
+
+            escol1.style.display = 'none'
+            escol2.style.display = 'none'
+
+            escol3.style.display = 'block'
+            escol4.style.display = 'block'
+
+            contin1.style.display = 'none'
+
+            escol3.style.display = "inline-block";
+            escol3.innerHTML = "Corro até a mesa"
+
+            escol4.style.display = "inline-block";
+            escol4.innerHTML = "Vou cuidadosamente até a mesa"
+
+            confl2.innerHTML = "No momento que a tal da mesa saiu daquele objeto, a chuva ficou muito mais forte, e o homem correu para longe, pegando uma bolsa e cravando algo no chão antes de ir. Agora, mais curioso do que antes, o quê você fará?"
+        }
+
+        function tropecar() {
+            escol1.style.display = 'none';
+            escol2.style.display = 'none';
+            tropec1.style.display = 'block'
+            tropec1.innerHTML = "Se soltar"
+
+            confl1.innerHTML = 'Por causa da sua pressa, você tropeçou num galho e prendeu o seu pé nele.';
+
+        }
+        function soltar1() {
+            tropec1.style.display = 'none'
+            tropec2.style.display = 'block'
+            confl1.innerHTML = "Você não se soltou.";
+            tropec2.innerHTML = "Soltar"
+        }
+        function soltar2() {
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'block'
+            confl1.innerHTML = "Você ainda não se soltou."
+            tropec3.innerHTML = "Soltar!"
+            escol2.style.display = 'none'
+        }
+
+        function pergunta3queda() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            confl2.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+
+            confl3.style.display = 'block'
+            confl3.style.cursor = 'default'
+            confl3.style.backgroundColor = '#0a43be6b'
+            confl3.style.color = 'var(--azul-claro)'
+            confl3.innerHTML = "Ao tentar correr até a mesa, você tropeça numa pedra e cai de cara no chão."
+            continpedra.style.display = 'block'
+        }
+
+        function pergunta3lento() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            confl2.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+
+            confl3.style.display = 'block'
+            confl3.style.cursor = 'default'
+            confl3.style.backgroundColor = '#0a43be6b'
+            confl3.style.color = 'var(--azul-claro)'
+            confl3.innerHTML = "Você vai, lentamente, até a mesa. Quando você se aproxima dela, você ouve uma voz estranha vindo dela dizendo algo num idioma que você não entende. Levemente assustado, você decide pegar ela e correr de volta até sua casa."
+            contin2.style.display = 'block'
+        }
+        function pergunta3normal() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            confl2.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+
+            confl3.style.display = 'block'
+            confl3.style.backgroundColor = '#0a43be6b'
+            confl3.style.cursor = 'default'
+            confl3.style.color = 'var(--azul-claro)'
+            confl3.innerHTML = "Você vai, com o rosto mais sujo do que antes, até a mesa. Quando você se aproxima dela, você ouve uma voz estranha vindo dela dizendo \"TEMPO DE CARREGAMENTO 3 HORAS\". Levemente assustado, você decide pegar ela e correr de volta até sua casa."
+            continpedra.style.display = 'none'
+            contin2.style.display = 'block'
+        }
+
+        function pergunta3p2() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievalnoite.jpg)'
+
+            contin2.style.display = 'none'
+
+            confl2.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+
+            escol5.style.display = 'block'
+            escol6.style.display = 'block'
+            confl3.style.display = 'block'
+
+            escol5.style.display = "inline-block";
+            escol5.style.color = 'var(--azul-claro)'
+            escol5.style.borderColor = 'var(--azul-mais-escuro)'
+            escol5.style.backgroundColor = 'var(--azul-escuro)'
+            escol5.innerHTML = "Coloco uma toalha de mesa em cima dele"
+
+            escol6.style.display = "inline-block";
+            escol6.style.color = 'var(--azul-claro)'
+            escol6.style.borderColor = 'var(--azul-mais-escuro)'
+            escol6.style.backgroundColor = 'var(--azul-escuro)'
+            escol6.innerHTML = "Coloco ele do lado da mesa das poções"
+
+            confl3.innerHTML = "Agora na sua casa, você pensa o quê fazer com esse objeto estranho que você acabou de achar no meio do mato. Você decide esconder ele em algum lugar para observá-lo melhor no dia seguinte. O quê você fará?"
+        }
+
+        function pergunta4toalha() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievaldia.jpg)'
+
+            escol5.style.display = 'none'
+            escol6.style.display = 'none'
+            confl3.style.display = 'none'
+
+            contin3.style.display = 'block'
+            confl4.style.cursor = 'default'
+            confl4.style.display = 'block'
+
+            confl4.style.color = 'var(--azul-claro)'
+            confl4.innerHTML = "No dia seguinte, você decide dar uma olhada melhor no objeto antes de abrir sua loja. Tirando a toalha dele, você percebe que há uma luz azul emanando de um de seus furos, mas antes que você possa prestar mais atenção, você ouve batidas na porta e rapidamente coloca a toalha de volta nele antes de ir atender."
+            
+        }
+
+        function pergunta4mesa() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievaldia.jpg)'
+
+            escol5.style.display = 'none'
+            escol6.style.display = 'none'
+            confl3.style.display = 'none'
+
+            contin3.style.display = 'block'
+            confl4.style.cursor = 'default'
+            confl4.style.display = 'block'
+
+            confl4.style.color = 'var(--azul-claro)'
+            confl4.innerHTML = "No dia seguinte, você decide dar uma olhada melhor no objeto antes de abrir sua loja. Saindo do seu quarto, você vê que ele está emanando uma luz azul, mas antes de você se aproximar, você ouve batidas na porta. Você rapidamente joga uma toalha em cima dele e vai atender."
+            
+        }
+
+        function pergunta4p2() {
+
+            contin3.style.display = 'none'
+
+            confl4.innerHTML = "Do outro lado havia um cavaleiro, que te fez uma pergunta:  \"Bom dia, por acaso o senhor viu um homem vestindo um sobretudo preto por aí? Estamos procurando por ele.\""
+
+            escol7.style.display = "inline-block";
+            escol7.style.color = 'var(--azul-claro)'
+            escol7.style.borderColor = 'var(--azul-mais-escuro)'
+            escol7.style.backgroundColor = 'var(--azul-escuro)'
+            escol7.style.height = '180px'
+            escol7.innerHTML = "\"Não, senhor. Mas eu ouvi uns barulhos estranhos ontem a noite, vindo da floresta.\""
+
+            escol8.style.display = "inline-block";
+            escol8.style.color = 'var(--azul-claro)'
+            escol8.style.borderColor = 'var(--azul-mais-escuro)'
+            escol8.style.backgroundColor = 'var(--azul-escuro)'
+            escol8.innerHTML = "\"Não o vi, senhor.\""
+        }
+
+        function pergunta5floresta() {
+
+            escol7.style.display = 'none'
+            escol8.style.display = 'none'
+            confl4.style.display = 'none'
+
+            contin4.style.display = 'block'
+
+            confl5.style.display = 'block'
+            confl5.style.cursor = 'default'
+            confl5.style.color = 'var(--azul-claro)'
+            confl5.innerHTML = "\"Nós também ouvimos. Imaginamos que ele tenha algo a ver com aquele estrondo. Enfim, obrigado.\" Ele diz antes de sair. Você fecha a porta, e lembra que já é hora de abrir sua loja, então você decide mexer no objeto estranho depois."
+        }
+        function pergunta5nao() {
+            escol7.style.display = 'none'
+            escol8.style.display = 'none'
+            confl4.style.display = 'none'
+
+            contin4.style.display = 'block'
+
+            confl5.style.display = 'block'
+            confl5.style.color = 'var(--azul-claro)'
+            confl5.innerHTML = "\"Ok, então. Obrigado.\" Ele diz antes de sair. Você fecha a porta, e lembra que já é hora de abrir sua loja, então você decide mexer no objeto estranho depois."
+        }
+        function pergunta5p2() {
+            document.getElementById("body").style.backgroundImage = "url(lojamedievalnoite.jpg)"
+
+            contin4.style.display = 'none'
+            contin5.style.display = 'block'
+
+            confl5.innerHTML = "Naquela noite, após fechar a sua loja, você passa um tempinho tentando fazer algo com o objeto, mexendo nele, mas você não consegue entender como ele funciona. Aproveitando que estava chovendo, você tenta pegar o Heléboro-Azul novamente."
+            confl5.style.display = 'block'
+
+        }
+        function pergunta5p3() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            escol9.style.display = "inline-block";
+            escol9.style.color = 'var(--azul-claro)'
+            escol9.style.borderColor = 'var(--azul-mais-escuro)'
+            escol9.style.backgroundColor = 'var(--azul-escuro)'
+            escol9.innerHTML = "Alerto minha presença e ando até ele"
+
+            escol10.style.display = "inline-block";
+            escol10.style.color = 'var(--azul-claro)'
+            escol10.style.borderColor = 'var(--azul-mais-escuro)'
+            escol10.style.backgroundColor = 'var(--azul-escuro)'
+            escol10.innerHTML = "Vou até ele sem fazer barulho"
+
+            contin5.style.display = 'none'
+
+            confl5.innerHTML = "Na floresta, procurando novamente pela flor e ainda curioso, você volta até o lugar onde viu o homem e o objeto pela primeira vez. Para a sua surpresa, ambos os dois estavam lá, com o homem de costas para você. Querendo interagir com o homem, você pensa numa maneira de se aproximar dele. O quê você fará?"
+
+        }
+        function pergunta5susto() {
+            escol9.style.display = 'none'
+            escol10.style.display = 'none'
+
+            contin6.style.display = 'block'
+
+            confl5.innerHTML = "De repente, o homem se vira pra trás e te vê antes de você se aproximar dele. \"Ei! Quem é você?\", ele grita, num sotaque estranho. Você diz que viu ele ontem, aqui na floresta."
+        }
+        function pergunta5oi() {
+            escol9.style.display = 'none'
+            escol10.style.display = 'none'
+
+            contin6.style.display = 'block'
+
+            confl5.innerHTML = "\"Oi!\", você grita. O homem se vira e diz: \"Hã? Quem é você?\" num sotaque estranho. \"Eu te vi ontem aqui na floresta enquanto eu pegava flores\", você responde."
+        }
+
+        function pergunta6() {
+
+            contin6.style.display = 'none'
+            confl5.style.display = 'none'
+
+            confl6.style.display = "block";
+            confl6.style.cursor = 'default'
+            confl6.style.color = 'var(--azul-claro)';
+            confl6.style.backgroundColor = '#0a43be6b';
+            confl6.innerHTML = "\"Ah, você era aquele homem atrás da árvore.\", ele responde. \"Você não tá atrás de mim, né?\" Você responde:"
+
+            escol11.style.display = "inline-block";
+            escol11.style.color = 'var(--azul-claro)'
+            escol11.style.borderColor = 'var(--azul-mais-escuro)'
+            escol11.style.backgroundColor = 'var(--azul-escuro)'
+            escol11.style.height = '120px'
+            escol11.innerHTML = "\"Eu só estava procurando uma flor, mesmo.\""
+
+            escol12.style.display = "inline-block";
+            escol12.style.color = 'var(--azul-claro)'
+            escol12.style.borderColor = 'var(--azul-mais-escuro)'
+            escol12.style.backgroundColor = 'var(--azul-escuro)'
+            escol12.innerHTML = "\"Ei, acho que eu tenho algo que é seu...\""
+        }
+        function pergunta6flor() {
+            escol11.style.display = 'none'
+            escol12.style.display = 'none'
+
+            contin7.style.display = 'block'
+
+            confl6.innerHTML = "\"Ah, entendi\" ele responde. \"Dependendo da flor, talvez eu possa saber onde ela está. Eu tenho um conhecimento extenso dessa floresta\". Você diz: \"Aliás, acho que eu tenho algo que é seu... uma mesa estranha que brilha, que estava naquela sua máqu-\" Antes mesmo de você terminar sua sentença, ele confirma que é sim algo dele, e você concorda em ir na sua casa ir buscar a \"mesa\" pra ele."
+        }
+        function pergunta6algoseu() {
+            escol11.style.display = 'none'
+            escol12.style.display = 'none'
+
+            contin7.style.display = 'block'
+
+            confl6.innerHTML = "\"Algo meu?\", ele responde. Você explica que procurava uma flor azul quando viu a luz, e que pegou a \"mesa azul\" e a deixou na sua loja, com ele confirmando que é dele. Vocês dois concordam em você voltar na sua loja para buscá-la."
+        }
+        function pergunta7() {
+            document.getElementById("body").style.backgroundImage = "url(vilanoite.jpg)"
+
+            contin7.style.display = 'none'
+            confl6.style.display = 'none'
+
+            escol13.style.display = "inline-block";
+            escol13.style.color = 'var(--azul-claro)'
+            escol13.style.borderColor = 'var(--azul-mais-escuro)'
+            escol13.style.backgroundColor = 'var(--azul-escuro)'
+            escol13.style.height = '120px'
+            escol13.innerHTML = "Volto e peço ajuda para o homem desconhecido"
+
+            escol14.style.display = "inline-block";
+            escol14.style.color = 'var(--azul-claro)'
+            escol14.style.borderColor = 'var(--azul-mais-escuro)'
+            escol14.style.backgroundColor = 'var(--azul-escuro)'
+            escol14.innerHTML = "Espero eles saírem de lá"
+
+            confl7.style.display = 'block'
+            confl7.style.cursor = 'default'
+            confl7.style.color = 'var(--azul-claro)'
+            confl7.style.backgroundColor = '#0a43be6b';
+            confl7.innerHTML = "No caminho de volta, logo antes de sair da floresta, você vê 3 cavaleiros andando na rua da sua casa. Se eles te vissem na floresta nesse horário, com certeza iriam suspeitar de você. O quê você fará?"
+        }
+        function pergunta7ajuda() {
+            document.getElementById("body").style.backgroundImage = "url(florestachuva.jpg)"
+
+            escol13.style.display = 'none'
+            escol14.style.display = 'none'
+
+            contin8.style.display = 'block'
+
+            confl7.innerHTML = "Você decide voltar para pedir ajuda ao homem da mesa estranha. Você explica a situação e ele sugere usar a máquina dele para distrair os cavaleiros. \"Ok, agora feche os olhos e tampe seus ouvidos...\", você o faz. Poucos segundos depois, até mesmo com seus ouvidos tampados e olhos fechados, você vê um clarão e ouve um som de estouro, com os dois sumindo rapidamente. \"Ok, vamos sair daqui agora.\" Ele te diz outro caminho para você seguir na volta, e você vai até a sua casa."
+        }
+
+        function pergunta7esperar() {
+            document.getElementById("body").style.backgroundImage = "url(vilanoite.jpg)"
+
+            escol13.style.display = 'none'
+            escol14.style.display = 'none'
+
+            contin8.style.display = 'block'
+
+            confl7.innerHTML = "Você decide esperar. Poucos momentos depois, eles vão para outro lugar, saindo de perto da sua casa. Você usa essa chance para entrar."
+        }
+
+        function pergunta7p2() {
+            document.getElementById("body").style.backgroundImage = "url(lojamedievalnoite.jpg)"
+
+            contin8.style.display = 'none'
+            contin9.style.display = 'block'
+
+            confl7.innerHTML = 'Agora na sua casa, você rapidamente pega a tal da mesa e volta até a floresta.'
+        }
+
+        function pergunta8() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            contin9.style.display = 'none'
+            confl7.style.display = 'none'
+
+            escol15.style.display = "inline-block";
+            escol15.style.color = 'var(--azul-claro)'
+            escol15.style.borderColor = 'var(--azul-mais-escuro)'
+            escol15.style.backgroundColor = 'var(--azul-escuro)'
+            escol15.innerHTML = "\"Ajudar como?\""
+
+            escol16.style.display = "inline-block";
+            escol16.style.color = 'var(--azul-claro)'
+            escol16.style.borderColor = 'var(--azul-mais-escuro)'
+            escol16.style.backgroundColor = 'var(--azul-escuro)'
+            escol16.innerHTML = "\"Heléboro-Azul.\""
+
+            confl8.style.display = 'block'
+            confl8.style.cursor = 'default'
+            confl8.style.color = 'var(--azul-claro)'
+            confl8.style.backgroundColor = '#0a43be6b';
+            confl8.innerHTML = "Na floresta, agora com a mesa, o homem diz: \"Ei, qual é o nome daquela flor que você procurava, mesmo? Acho que eu posso te ajudar a achar ela...\""
+        }
+        function pergunta8como() {
+            escol15.style.display = 'none'
+            escol16.style.display = 'none'
+
+            contin10.style.display = 'block'
+
+            confl8.innerHTML = "\"Eu só consigo te ajudar se você me dizer o nome da flor\", ele diz. \"Heléboro-Azul\", você responde. \"É, eu consigo te ajudar com essa flor. Espere só um minuto...\""
+        }
+        function pergunta8heleboro() {
+            escol15.style.display = 'none'
+            escol16.style.display = 'none'
+
+            contin10.style.display = 'block'
+
+            confl8.innerHTML = "\"Ah, sim, eu conheço essa flor. Me dê um instante...\""
+        }
+
+        function pergunta9() {
+            contin10.style.display = 'none'
+            confl8.style.display = 'none'
+
+            contin11.style.display = 'block'
+
+            confl9.style.display = 'block'
+            confl9.style.cursor = 'default'
+            confl9.style.color = 'var(--azul-claro)'
+            confl9.style.backgroundColor = '#0a43be6b';
+            confl9.innerHTML = "Ele vai até a mesa e interage com ela por alguns segundos, uma voz ecoa dela dizendo algo num idioma que você não entende, mas soa similar ao idioma da última vez. Após isso, ele aperta mais um botão, e logo começa a sair uma fumaça da mesa, tampando-a."
+        }
+
+        function pergunta9p2() {
+            contin11.style.display = 'none'
+
+            escol17.style.display = "inline-block";
+            escol17.style.color = 'var(--azul-claro)'
+            escol17.style.borderColor = 'var(--azul-mais-escuro)'
+            escol17.style.backgroundColor = 'var(--azul-escuro)'
+            escol17.innerHTML = "Sim, são essas!"
+
+            escol18.style.display = "inline-block";
+            escol18.style.color = 'var(--azul-claro)'
+            escol18.style.borderColor = 'var(--azul-mais-escuro)'
+            escol18.style.backgroundColor = 'var(--azul-escuro)'
+            escol18.innerHTML = "C-Como você fez isso?"
+
+            confl9.innerHTML = "Quando a fumaça se dissipa, você vê três heléboros-azuis em cima da mesa, sem fazer ideia de como eles apareceram ali. \"São essas as flores?\", ele pergunta."
+        }
+
+        function pergunta10saosim() {
+            confl9.style.display = 'none'
+            escol17.style.display = 'none'
+            escol18.style.display = 'none'
+
+            contin12.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.cursor = 'default'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Que bom, então. Significa que a minha máquina está funcionando corretamente, até mesmo nessa chuva. Pode ficar com as flores.\" Você pega as flores, ainda contemplando o quê você acabou de ver."
+        }
+
+        function pergunta10oqhouve() {
+            confl9.style.display = 'none'
+            escol17.style.display = 'none'
+            escol18.style.display = 'none'
+
+            contin12.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.cursor = 'default'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Eu... é... eu não acho que eu conseguiria te explicar muito bem, mas eu recriei a flor usando a minha... mesa.\" Você ainda permanece confuso."
+        }
+        function pergunta10p2() {
+            contin12.style.display = 'none'
+
+            escol19.style.display = "inline-block";
+            escol19.style.color = 'var(--azul-claro)'
+            escol19.style.borderColor = 'var(--azul-mais-escuro)'
+            escol19.style.backgroundColor = 'var(--azul-escuro)'
+            escol19.innerHTML = "Me despeço e volto para casa"
+
+            escol20.style.display = "inline-block";
+            escol20.style.color = 'var(--azul-claro)'
+            escol20.style.borderColor = 'var(--azul-mais-escuro)'
+            escol20.style.backgroundColor = 'var(--azul-escuro)'
+            escol20.innerHTML = "Agradeço pelas flores e volto para casa"
+
+            confl10.innerHTML = "O homem desconhecido diz que ele deveria ir logo, pois já fez o que precisava fazer, e você ainda precisa dormir hoje."
+        }
+        function pergunta10obg() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievalnoite.jpg)'
+
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
+
+            contin13.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Não foi nada\", ele diz antes de vocês dois partirem caminhos. Ao chegar na sua casa, você ouve novamente o estouro que havia ouvido nas últimas duas vezes. Por sorte, você ainda conseguiu dormir aquela noite."
+        }
+        function pergunta10tchau() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievalnoite.jpg)'
+
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
+
+            contin13.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "Ao chegar na sua casa, você ouve novamente o estouro que havia ouvido nas últimas duas vezes. Por sorte, você ainda conseguiu dormir aquela noite."
+        }
+
+        function creditos() {
+            document.getElementById("body").style.backgroundImage = 'url(vilaescura.jpg)'
+
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
+
+            contin13.style.display = 'none'
+
+            reiniciar.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "Nos dias seguintes, você termina as poções que estava fazendo com o heléboro-azul e ouve as pessoas de sua vila falando sobre o acontecimento das luzes azuis. Naturalmente, diversas explicações diferentes para aquilo ter acontecido surgem, mas nenhuma delas pode ser considerada verídica. Até mesmo você não consegue encontrar uma explicação para a situação. Você prefere não falar sobre para as outras pessoas, e continua sua vida normalmente, ainda se perguntando quem era aquele homem."
+        }
+
+        function removerFadeContx() {
+            fadecontx.style.display = 'none'
+        }
+
+        function fadeContx() {
+        fadecontx.style.display = 'block'
+        }
+
+        function fadeNormal() {
+            fadenorm.style.display = 'block'
+        }
+        function removerFadeNormal() {
+            fadenorm.style.display = 'none'
+        }
+        function fadePiscar() {
+            fadepisc.style.display = 'block'
+        }
+        function removerFadePiscar() {
+            fadepisc.style.display = 'none'
+        }
+        </script>
+    
+</body>
+</html>

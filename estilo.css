@@ -1,0 +1,997 @@
+:root {
+
+    --preto-total: #000000;
+    --cinza-escuro: #3a3a3a;
+    --cinza: #5f5f5f;
+    --cinza-claro: #929292;
+    --branco: #e4e4e4;
+    --branco-total: #ffffff;
+    --violeta: #5b00b1;
+    --purpura: #b600e4;
+    --rosa-choque: #ff22c8;
+    --rosa-claro:#fd89d1;
+    --azul-claro: #5cccf8;
+    --ciano: #06a7a7;
+    --azul-escuro: #092f74;
+    --azul-mais-escuro: #07204e;
+    --azul-estranho: #505a86;
+    --azul-futuro: #007eaf;
+    --vermelho: #e70000;
+    --vermelho-escuro: #7c0000;
+    --bege: #886464;
+    --amarelo: #fdd700;
+    --amarelo-podre: #87a500;
+    --dourado: #daa001;
+    --laranja-solido: #ff5e00;
+    --marrom-escuro: #632700;
+    --marrom-mais-escuro: #471d00;
+    --marrom-claro: #b65200;
+    --verde-escuro: #006308;
+    --verde-claro: #00b818;
+    
+}
+
+#body {
+    background-image: url(vilaescura.jpg);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('vilaescura.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 100%;
+     width: 100%;
+     height: 80%;
+}
+
+
+#frasecontexto {
+    font-size: 45px;
+    text-align: center;
+    color: var(--marrom-claro);
+    background-color: rgba(90, 49, 16, 0.6);
+    margin-left: 30%;
+    margin-right: 35%;
+    margin: 7.5%;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    cursor: default;
+ }
+
+ #botaocontexto {
+    text-align: center;
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 3s;
+ }
+
+ #botaocontexto:hover {
+    color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
+    cursor: pointer;
+ }
+
+ #contexto {
+    text-align: center;
+    color: var(--marrom-claro);
+    font-size: 50px;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    cursor: default;
+    margin-top: 150px;
+ }
+
+ #fadecontexto {
+    background-color: var(--branco-total);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background:var(--branco-total);
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 1s, fade-out 1s;
+    animation-delay: 0s, 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #fadenormal {
+   background-color: var(--branco-total);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background:var(--branco-total);
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 0.3s, fade-out 0.3s;
+    animation-delay: 0s, 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  #piscar {
+   background-color: var(--branco-total);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background:var(--branco-total);
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 0.3s, fade-out 0.3s;
+    animation-delay: 0s, 0s;
+    animation-fill-mode: forwards;
+  }
+
+ @keyframes fade-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+ }
+
+ @keyframes fade-out {
+   from {opacity: 100%;}
+   to {opacity: 0%;}
+ }
+
+ #conflito1 {
+    font-size: 45px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin: 7.5%;
+    background-color: rgba(16, 39, 90, 0.6);
+    display: none;
+    color: var(--marrom-claro);
+    line-height: 1.5;
+ }
+
+ #escolha1 {
+    display: none;
+    text-align: center;
+    width: 330px;
+    height: 110px;
+    font-size: 30px;
+    display: none;
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
+    border-radius: 1px;
+    border-color:  var(--azul-escuro);
+    transition-duration: 0.8s;
+    margin-left: 30%;
+    vertical-align: middle;
+ }
+
+#escolha2 {
+    display: none;
+    text-align: center;
+    width: 330px;
+    height: 110px;
+    font-size: 30px;
+    border-color:  var(--azul-escuro);
+    display: none;
+    background-color: var(--marrom-escuro);
+    color: var(--marrom-claro);
+    border-radius: 1px;
+    transition-duration: 0.8s;
+    margin-left: 8%;
+    vertical-align: middle;
+}
+
+#escolha1:hover {
+   color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
+    cursor: pointer;
+}
+
+#escolha2:hover {
+   color: var(--marrom-claro);
+    background-color: var(--marrom-mais-escuro);
+    cursor: pointer;
+}
+
+#conflito2 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha3 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   border-color:  var(--azul-escuro);
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha4 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   border-color:  var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha3:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha4:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito3 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha5 {
+   display: none;
+   text-align: center;
+   border-color:  var(--azul-escuro);
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha6 {
+   display: none;
+   text-align: center;
+   border-color:  var(--azul-escuro);
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha5:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha6:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito4 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha7 {
+   display: none;
+   text-align: center;
+   border-color:  var(--azul-escuro);
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha8 {
+   display: none;
+   border-color:  var(--azul-escuro);
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha7:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha8:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito5 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha9 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   border-color:  var(--azul-escuro);
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha10 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   border-color:  var(--azul-escuro);
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha9:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha10:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito6 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha11 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   border-color:  var(--azul-escuro);
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha12 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   border-color:  var(--azul-escuro);
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha11:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha12:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito7 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha13 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   border-color:  var(--azul-escuro);
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha14 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   border-color:  var(--azul-escuro);
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha13:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha14:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito8 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha15 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   border-color:  var(--azul-escuro);
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha16 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   border-color:  var(--azul-escuro);
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha15:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha16:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito9 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha17 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   border-color:  var(--azul-escuro);
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha18 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   border-color:  var(--azul-escuro);
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha17:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha18:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#conflito10 {
+   font-size: 45px;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin: 7.5%;
+   background-color: rgba(16, 39, 90, 0.6);
+   display: none;
+   color: var(--marrom-claro);
+   line-height: 1.5;
+}
+
+#escolha19 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   border-color:  var(--azul-escuro);
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 30%;
+   vertical-align: middle;
+}
+
+#escolha20 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   border-color:  var(--azul-escuro);
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+}
+
+#escolha19:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#escolha20:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#tropeco1 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+   border-color: var(--azul-mais-escuro);
+   animation-name: fade-in;
+   animation-duration: 2s;
+   margin: auto;
+   margin-top: 15%;
+}
+
+#tropeco1:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#tropeco2 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+   margin: auto;
+   margin-top: 15%;
+}
+
+#tropeco2:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#tropeco3 {
+   display: none;
+   text-align: center;
+   width: 330px;
+   height: 110px;
+   font-size: 30px;
+   display: none;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   border-radius: 1px;
+   transition-duration: 0.8s;
+   margin-left: 8%;
+   vertical-align: middle;
+   margin: auto;
+   margin-top: 15%;
+}
+
+#tropeco3:hover {
+   background-color: var(--azul-mais-escuro);
+   cursor: pointer;
+}
+
+#continuar1 {
+   text-align: center;
+    width: 300px;
+    height: 110px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar2 {
+   text-align: center;
+    width: 300px;
+    height: 110px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar3 {
+   text-align: center;
+    width: 300px;
+    height: 110px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar4 {
+   text-align: center;
+    width: 300px;
+    height: 110px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuarpedra {
+   text-align: center;
+    width: 300px;
+    height: 110px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar5 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar6 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar7 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar8 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar9 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar10 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar11 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar12 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar13 {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#reiniciar {
+   text-align: center;
+   width: 300px;
+   height: 110px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
